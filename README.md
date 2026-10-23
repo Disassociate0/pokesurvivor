@@ -32,48 +32,6 @@ localStorage.removeItem('ps.save.offline')
 
 Reload the page to create a fresh save.
 
-## Publish your own GitHub Pages copy
-
-1. Create an empty repository on your GitHub account. Do not add a README,
-   license, or `.gitignore`; this project already has them.
-2. In this project folder, add your new repository as `origin` and push:
-
-   ```sh
-   git remote add origin https://github.com/YOUR-NAME/YOUR-REPOSITORY.git
-   git push -u origin main
-   ```
-
-   This working copy keeps the original project remote under `upstream`. Never
-   push your changes to that remote.
-3. In your new repository, open **Settings → Pages**. Choose **Deploy from a
-   branch**, select **main** and **/(root)**, then save.
-4. GitHub will show your site address in the Pages settings. Open that address.
-
-Pages users need internet to load the site. Saves stay in each visitor’s own
-browser and do not transfer between devices or GitHub accounts.
-
-If you downloaded a ZIP without its `.git` folder, initialize a repository
-before step 2:
-
-```sh
-git init -b main
-git add -A
-git commit -m "Prepare PokéSurvivor offline fork"
-```
-
-## Editing and rebuilding
-
-Edit `dev.html` and files in `js/` or `css/`. `index.html` and
-`js/app.min.js` are generated. After changing game code, rebuild the bundle with
-Node.js and npm:
-
-```sh
-node tools/build.js --sin-seo
-```
-
-The build downloads its minifier tools through npm. Normal play and serving the
-already built game need only Python 3.
-
 ## License and credits
 
 The game source is under the [PolyForm Noncommercial 1.0.0
